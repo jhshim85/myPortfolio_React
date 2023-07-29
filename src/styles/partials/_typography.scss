@@ -1,0 +1,26 @@
+* {
+  font-size: 125%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: $black;
+}
+
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
