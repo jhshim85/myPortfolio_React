@@ -38,11 +38,9 @@
     position: relative;
     overflow: hidden;
     border-color: $yellowOrange;
-    &:hover {
-      background-color: $yellowOrange;
-    }
     &:before {
       z-index: -1;
+      background-color: $yellowOrange;;
       content: '';
       position: absolute;
       top: 0;
@@ -50,11 +48,12 @@
       left: 0;
       right: 0;
       transform: translateX(100%);
-      transition: transform 0.3s ease-out;
       border-radius: 35px;
     }
-    &:hover:before {
+    &:hover:before,
+    &:focus:before {
       transform: translateX(0);
+      transition: 0.3s ease-out;
     }
     &--text {
       font-size: 1.1rem;
