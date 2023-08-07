@@ -1,0 +1,122 @@
+nav {
+  position: fixed;
+  right: 50px;
+  bottom: 0;
+  z-index: 10;
+  height: calc(100vh - 200px);
+  top: 50px;
+}
+
+.menu__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  &--list {
+    padding: 3px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &--item {
+    color: $white;
+    display: block;
+    height: 50px;
+    z-index: -1;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    font-size: 15px;
+    top: 0;
+    right: 0;
+    border-radius: 35px;
+    padding: 16px 65px 16px 25px;
+    font-weight: 900;
+    transition: 0.3s ease-in-out;
+  }
+  &--icon {
+    color: $white;
+    background-color: $lightGrey;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+  }
+  li:hover &--item,
+  li:focus-within &--item {
+    visibility: visible;
+    opacity: 1;
+    background-color: $yellowOrange;
+  }
+  li:hover &--icon,
+  li:focus-within &--icon {
+    background-color: $yellowOrange;
+  }
+}
+
+.menu__slide {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  &--button {
+    display: inline-block;
+    text-align: center;
+    border-radius: 25%;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    color: $yellowOrange;
+    border: 2px solid $yellowOrange;
+    font-size: 1.25rem;
+  }
+  &:hover &--button,
+  &:focus-within &--button {
+    background-color: $yellowOrange;
+    color: $white;
+  }
+  &:hover &--bar,
+  &:focus-within &--bar {
+    display: flex;
+  }
+  &--bar {
+    z-index: 10;
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  &--icon {
+    width: 25px;
+    height: 25px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25%;
+    transition: background-color 0.2s ease-in-out;
+    color: $white;
+    background-color: $lightGrey;
+  }
+  li:hover &--icon,
+  li:focus-within &--icon {
+    background-color: $yellowOrange;
+  }
+}

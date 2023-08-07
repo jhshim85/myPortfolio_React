@@ -1,0 +1,30 @@
+.theme__toggle {
+  color: $yellowOrange;
+  position: fixed;
+  right: 20px;
+  z-index: 100;
+  top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  &--container {
+    height: 25px;
+    width: 50px;
+    border-radius: 25px;
+    border: 1px solid $yellowOrange;
+    position: relative;
+  }
+  &--notch {
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus {
+      transform: translateX(27px);
+    }
+  }
+}
