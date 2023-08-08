@@ -17,9 +17,12 @@
     border-radius: 25px;
     border: 1px solid $yellowOrange;
     position: relative;
+    &:focus-visible {
+      outline: none;
+    }
   }
   &--container:hover &--notch,
-  &--container:focus &--notch{
+  &--container:focus-visible &--notch{
     transform: translateX(17px);
   }
   &--notch {

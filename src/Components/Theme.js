@@ -5,7 +5,7 @@ const Theme = () => {
   return (
     <div className="theme__toggle">
       <FontAwesomeIcon icon={faMoon} className="theme__toggle--icon" />
-      <div className="theme__toggle--container">
+      <div className="theme__toggle--container" tabIndex="0">
         <FontAwesomeIcon
           icon={faCircleHalfStroke}
           className="theme__toggle--notch"
