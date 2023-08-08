@@ -4,13 +4,16 @@ import { faMoon, faSun, faCircleHalfStroke } from "@fortawesome/free-solid-svg-i
 const Theme = () => {
   return (
     <div className="theme__toggle">
-      <FontAwesomeIcon icon={faMoon} />
+      <FontAwesomeIcon icon={faMoon} className="theme__toggle--icon" />
       <div className="theme__toggle--container">
-        <FontAwesomeIcon icon={faCircleHalfStroke} className="theme__toggle--notch"/>
+        <FontAwesomeIcon
+          icon={faCircleHalfStroke}
+          className="theme__toggle--notch"
+        />
       </div>
-      <FontAwesomeIcon icon={faSun} />
+      <FontAwesomeIcon icon={faSun} className="theme__toggle--icon" />
     </div>
-  )
+  );
 }
 
 export default Theme

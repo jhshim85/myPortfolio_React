@@ -16,3 +16,25 @@ img {
   position: relative;
   top: -50px;
 }
+
+.section__heading {
+  text-transform: uppercase;
+  margin: 50px 0;
+  font-size: 1.8rem;
+  color: $white;
+  span {
+    color: $yellowOrange;
+  }
+  &--bg {
+    color: rgba($color: $white, $alpha: 0.1);
+    font-size: 4rem;
+    left: 0;
+    letter-spacing: 0.2rem;
+    line-height: 0.7rem;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}

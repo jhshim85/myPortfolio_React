@@ -39,7 +39,7 @@ const Nav = () => {
           </li>
         </ul>
         <div className="menu__slide">
-          <p className="menu__slide--button" title="Click Me" tabindex='0'>JS</p>
+          <p className="menu__slide--button" title="Click Me" tabIndex='0'>JS</p>
           <ul className="menu__slide--bar">
             <li>
               <Link to="/">

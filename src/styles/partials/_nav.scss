@@ -1,6 +1,6 @@
 nav {
   position: fixed;
-  right: 50px;
+  right: 20px;
   bottom: 0;
   z-index: 10;
   height: calc(100vh - 200px);
@@ -55,16 +55,23 @@ nav {
     border-radius: 50%;
     transition: background-color 0.2s ease-in-out;
   }
-  li:hover &--item,
-  li:focus-within &--item {
+  &--list:hover &--item,
+  &--list:focus-within &--item {
     visibility: visible;
     opacity: 1;
     background-color: $yellowOrange;
   }
-  li:hover &--icon,
-  li:focus-within &--icon {
+  &--list:hover &--icon,
+  &--list:focus-within &--icon {
     background-color: $yellowOrange;
   }
+  // &--list:focus:not(:hover) &--item {
+  //   visibility: hidden;
+  //   opacity: 0;
+  // } 
+  // &--list:focus:not(:hover) &--icon {
+  //   background-color: $lightGrey;
+  // }
 }
 
 .menu__slide {
