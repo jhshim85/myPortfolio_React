@@ -55,23 +55,19 @@ nav {
     border-radius: 50%;
     transition: background-color 0.2s ease-in-out;
   }
+  &--list:focus-visible {
+    outline: none;
+  }
   &--list:hover &--item,
-  &--list:focus-within &--item {
+  &--list:focus-visible &--item {
     visibility: visible;
     opacity: 1;
     background-color: $yellowOrange;
   }
   &--list:hover &--icon,
-  &--list:focus-within &--icon {
+  &--list:focus-visible &--icon {
     background-color: $yellowOrange;
   }
-  // &--list:focus:not(:hover) &--item {
-  //   visibility: hidden;
-  //   opacity: 0;
-  // } 
-  // &--list:focus:not(:hover) &--icon {
-  //   background-color: $lightGrey;
-  // }
 }
 
 .menu__slide {

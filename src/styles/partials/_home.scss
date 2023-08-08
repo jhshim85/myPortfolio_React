@@ -49,6 +49,9 @@
       transform: translateX(100%);
       border-radius: 35px;
     }
+    &:focus {
+      outline: none;
+    }
     &:hover:before,
     &:focus:before {
       transform: translateX(0);

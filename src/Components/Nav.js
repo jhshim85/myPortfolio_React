@@ -7,32 +7,32 @@ const Nav = () => {
     <>
       <nav>
         <ul className="menu__main">
-          <li className="menu__main--list">
-            <Link to="/">
+          <li>
+            <Link to="/" className="menu__main--list">
               <h4 className="menu__main--item">Home</h4>
               <FontAwesomeIcon icon={faHome} className="menu__main--icon" />
             </Link>
           </li>
-          <li className="menu__main--list">
-            <Link to="/about">
+          <li>
+            <Link to="/about" className="menu__main--list">
               <h4 className="menu__main--item">About</h4>
               <FontAwesomeIcon icon={faUser} className="menu__main--icon" />
             </Link>
           </li>
-          <li className="menu__main--list">
-            <Link to="/skills">
+          <li>
+            <Link to="/skills" className="menu__main--list">
               <h4 className="menu__main--item">Skill</h4>
               <FontAwesomeIcon icon={faScrewdriverWrench} className="menu__main--icon" />
             </Link>
           </li>
-          <li className="menu__main--list">
-            <Link to="/projects">
+          <li>
+            <Link to="/projects" className="menu__main--list">
               <h4 className="menu__main--item">Project</h4>
               <FontAwesomeIcon icon={faPanorama} className="menu__main--icon" />
             </Link>
           </li>
-          <li className="menu__main--list">
-            <Link to="/contact">
+          <li>
+            <Link to="/contact" className="menu__main--list">
               <h4 className="menu__main--item">Contact</h4>
               <FontAwesomeIcon icon={faEnvelopeOpen} className="menu__main--icon" />
             </Link>
