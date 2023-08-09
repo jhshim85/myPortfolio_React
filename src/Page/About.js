@@ -49,7 +49,6 @@ const About = () => {
                   <img src={item.image} alt={item.title} />
                 </div>
                 <div className="about__text--container">
-                  {/* <h3 className="about__text--title"><em>Creative, Challenge, Curious, Innovative, Simple</em></h3> */}
                   <p className="about__text--content">
                     {documentToReactComponents(item.content)}
                   </p>

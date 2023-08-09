@@ -1,0 +1,45 @@
+.skills {
+  text-align: center;
+  position: relative;
+}
+
+.skills__list--tech {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 5 - 10px), 220px));
+  justify-content: space-evenly;
+  // grid-gap: 10px;
+  li {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 10px;
+    color: $white;
+    .icon__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+      color: $yellowOrange;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .upcoming__skill {
+    position: relative;
+    .upcoming__skill--icon,
+    .upcoming__skill--type {
+      opacity: 0.3;
+    }
+    .upcoming__skill--text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      color: $yellowOrange;
+    }
+  }
+}
