@@ -16,7 +16,6 @@ const About = () => {
         });
 
         if (!!res) {
-          console.log(res);
           const items =
             res?.items.map((item) => ({
               id: item?.sys?.id,
@@ -35,7 +34,7 @@ const About = () => {
     };
     getAbout();
   }, []);
-
+  
   return (
     <main className="about">
       <div className="wrapper">
@@ -44,14 +43,12 @@ const About = () => {
         {
           about.map((item) => {
             return (
-              <div className="about__container">
+              <div className="about__container" key={item.id}>
                 <div className="about__pic--container">
                   <img src={item.image} alt={item.title} />
                 </div>
                 <div className="about__text--container">
-                  <p className="about__text--content">
-                    {documentToReactComponents(item.content)}
-                  </p>
+                  {documentToReactComponents(item.content)}
                 </div>
               </div>
             )
