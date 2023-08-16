@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Client from "../util/useContentful";
+import { ThemeContext } from "../Components/Theme";
 
 const About = () => {
+
+  const { theme } = useContext(ThemeContext);
 
   const [about, setAbout] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -36,10 +39,10 @@ const About = () => {
   }, []);
   
   return (
-    <main className="about">
+    <main className={`about ${theme}`}>
       <div className="wrapper">
-        <h2 className="section__heading">About <span>Me</span></h2>
-        <span className="section__heading--bg">About</span>
+        <h1 className="section__heading">About <span>Me</span></h1>
+        <h2 className="section__heading--bg">About</h2>
         {
           about.map((item) => {
             return (

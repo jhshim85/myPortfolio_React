@@ -1,19 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Client from "../util/useContentful";
-import { DiHtml5, DiCss3, DiSass, DiJsBadge, DiFirebase } from "react-icons/di";
-import {
-  FaGear,
-  FaReact,
-  FaGithub,
-  FaCircleChevronLeft,
-  FaCircleChevronRight,
-} from "react-icons/fa6";
-import { SiFirebase, SiContentful, SiTypescript } from "react-icons/si";
+import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { ThemeContext } from "../Components/Theme";
 
 const Projects = () => {
+
+  const { theme } = useContext(ThemeContext);
   
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -60,12 +55,10 @@ const Projects = () => {
   };
 
   return (
-    <main className="page__them--dark projects">
+    <main className={`projects ${theme}`}>
       <div className="wrapper">
-        <h2 className="section__heading">
-          My <span>Projects</span>
-        </h2>
-        <span className="section__heading--bg">Projects</span>
+        <h1 className="section__heading">My <span>Projects</span></h1>
+        <h2 className="section__heading--bg">Projects</h2>
         <div className="projects__container">
           <Carousel
             {...settings}
@@ -93,18 +86,24 @@ const Projects = () => {
               const defStyle = {
                 display: "inline-block",
                 marginLeft: 20,
-                backgroundColor: "#666",
                 cursor: "pointer",
                 border: "1px solid",
                 borderRadius: "50%",
                 width: "10px",
                 height: "10px",
+                backgroundColor: "#666",
               };
-              const style = isSelected
-                ? { ...defStyle, backgroundColor: "#ffb400" }
-                : { ...defStyle };
+              const style =
+                isSelected && theme === "page__theme--dark"
+                  ? { ...defStyle, backgroundColor: "#ffb400" }
+                  : isSelected && theme === "page__theme--light"
+                  ? { ...defStyle, backgroundColor: "#72b626" }
+                  : !isSelected && theme === "page__theme--light"
+                  ? { ...defStyle, backgroundColor: "#2b2a2a" }
+                  : { ...defStyle };
               return (
                 <div
+                  className={theme}
                   style={style}
                   onClick={onClickHandler}
                   onKeyDown={onClickHandler}

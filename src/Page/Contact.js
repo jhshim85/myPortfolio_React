@@ -1,21 +1,22 @@
 import { FaLocationDot, FaEnvelope, FaCalendarDays, FaLinkedin, FaGithub } from "react-icons/fa6";
+import { ThemeContext } from "../Components/Theme";
+import { useContext } from "react";
 
 const Contact = () => {
+
+  const { theme } = useContext(ThemeContext);
+  console.log(theme);
+
   return (
-    <main className="contact">
+    <main className={`contact ${theme}`}>
       <div className="wrapper">
-        <h2 className="section__heading">
-          Contact <span>Me</span>
-        </h2>
-        <span className="section__heading--bg">Contact</span>
+        <h1 className="section__heading">Contact <span>Me</span></h1>
+        <h2 className="section__heading--bg">Contact</h2>
         <div className="contact__container">
           <div className="contact__container--left">
-            <h4>Don't be shy!</h4>
+            <h3>Let's Connect!</h3>
             <p>
-              Feel free to get in touch with me. I am always open to discussing
-              new projects, creative ideas or opportunities to be part of your
-              visions. I'm also available for a casual chat over a coffee or a
-              drink!
+              Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions. I'm also available for a casual chat over a coffee or a drink!
             </p>
             <address>
               <FaLocationDot className="contact__icon" />

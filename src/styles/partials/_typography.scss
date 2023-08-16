@@ -1,6 +1,7 @@
 html {
   font-size: 125%;
-  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
   background-color: $black;
 }
 
@@ -11,6 +12,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     gap: 50px;
+    font-family: 'Poppins', 'Open Sans', sans-serif;
   }
   -ms-overflow-style: none;
   /* for Internet Explorer, Edge */

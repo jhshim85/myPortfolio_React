@@ -1,13 +1,17 @@
 import { useParams } from "react-router-dom"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Client from "../util/useContentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { INLINES } from "@contentful/rich-text-types";
 import { DiHtml5, DiCss3, DiSass, DiJsBadge, DiFirebase } from "react-icons/di";
-import { FaGear, FaReact, FaGithub } from "react-icons/fa6";
+import { FaGear, FaReact, FaLink, FaGithub } from "react-icons/fa6";
 import { SiFirebase, SiContentful, SiTypescript } from "react-icons/si";
+import { ThemeContext } from "../Components/Theme";
 
 const ProjectDetails = () => {
   
+  const { theme } = useContext(ThemeContext);
+
   const urlData = useParams();
 
   const [project, setProject] = useState([]);
@@ -32,6 +36,8 @@ const ProjectDetails = () => {
               description: item?.fields?.description,
               url: item?.fields?.url,
               skills: item?.fields?.skills,
+              liveWebsite: item?.fields?.liveWebsite,
+              githubRepo: item?.fields?.githubRepo
             })) || [];
           setProject(item);
           setLoading(false);
@@ -45,8 +51,18 @@ const ProjectDetails = () => {
     getProject();
   }, []);
 
+  const renderOptions = {
+    renderNode: {
+      [INLINES.HYPERLINK]: (node, children) => {
+        return (
+          <a href={node.data.uri} target="_blank" rel="noopener noreferrer">{children}</a>
+        );
+      }
+    }
+  }
+  
   return (
-    <main className="page__theme--dark">
+    <main className={`project ${theme}`}>
       {project.map((item) => {
         return (
           <div className="project__container wrapper" key={item.id}>
@@ -57,6 +73,30 @@ const ProjectDetails = () => {
               <img src={item.image} alt={item.imageName} />
             </div>
             <div className="project__container--text">
+              <div className="project__links">
+                <ul className="project__link--list">
+                  <li className="project__link--container">
+                    <p className="project__link--text">live website: </p>
+                    <a
+                      href={item.liveWebsite}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLink className="project__link--icon" />
+                    </a>
+                  </li>
+                  <li className="project__link--container">
+                    <p className="project__link--text">Github repo: </p>
+                    <a
+                      href={item.githubRepo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub className="project__link--icon" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <div className="project__skill">
                 <ul className="project__skill--list">
                   {item.skills.map((item, index) => {
@@ -89,7 +129,7 @@ const ProjectDetails = () => {
                 </ul>
               </div>
               <div className="project__description">
-                {documentToReactComponents(item.description)}
+                {documentToReactComponents(item.description, renderOptions)}
               </div>
             </div>
           </div>

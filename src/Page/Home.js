@@ -1,11 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../Components/Theme";
+import { useContext } from "react";
 
 const Home = () => {
+
+  const { theme } = useContext(ThemeContext);
+  
   return (
-    <main className="page__theme--dark">
-      <div className="wrapper heading__container">
+    <main className={theme}>
+      <div className="wrapper home__container">
         <h1 className="heading__greeting">Hello!</h1>
         <h2 className="heading__name">I'm Jaehyun(Jay).
         <br /><span className="heading__occupation">Front-End Developer</span></h2>
