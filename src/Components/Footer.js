@@ -6,8 +6,10 @@ const Footer = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <footer className={`footer ${theme}`}>
-      <p>© 2022 Jaehyun(Jay) Shim</p>
+    <footer className={theme}>
+      <div className="footer">
+        <p>© 2023 Jaehyun(Jay) Shim</p>
+      </div>
     </footer>
   );
 };

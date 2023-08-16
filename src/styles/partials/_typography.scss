@@ -2,23 +2,25 @@ html {
   font-size: 125%;
   font-style: normal;
   font-weight: 600;
-  background-color: $black;
 }
 
 body {
-  #root {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 50px;
-    font-family: 'Poppins', 'Open Sans', sans-serif;
-  }
+  font-family: 'Poppins', 'Open Sans', sans-serif;
   -ms-overflow-style: none;
   /* for Internet Explorer, Edge */
   scrollbar-width: none;
   /* for Firefox */
   overflow-y: scroll;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 
 body::-webkit-scrollbar {

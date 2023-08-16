@@ -8,10 +8,9 @@
   justify-content: center;
   gap: 50px;
   margin-top: 100px;
-  color: $white;
+  margin-bottom: 50px;
   .contact__icon {
     font-size: 1.5rem;
-    color: $yellowOrange;
   }
   &--left {
     text-align: left;
@@ -24,7 +23,6 @@
       font-size: 1.5rem;
       letter-spacing: 0.2rem;
       margin-top: 0;
-      color: $yellowOrange;
     }
     p {
       margin: 0;
@@ -51,13 +49,12 @@
       outline: none;
       text-transform: none;
       transition: 0.2s ease-in-out;
-      color: $white;
       .contact__icon {
         font-size: 2.5rem;
       }
       &:hover,
       &:focus {
-        transform: scale(1.35);
+        transform: scale(1.25);
       }
     }
   }

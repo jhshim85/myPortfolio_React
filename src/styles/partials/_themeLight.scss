@@ -1,0 +1,189 @@
+.page__theme--light {
+background-color: $white;
+  .theme__toggle {
+    color: $lightGreen;
+    &--container {
+      border: 1px solid $lightGreen;
+      &:focus-visible {
+        outline-color: $lightGreen;
+      }
+    }
+  }
+
+  .menu__main {
+    &--item {
+      color: $white;
+    }
+    &--icon {
+      color: $white;
+      background-color: $lightGrey;
+    }
+  }
+  .menu__main--list:hover .menu__main--item,
+  .menu__main--list:focus-visible .menu__main--item {
+    background-color: $lightGreen;
+  }
+  .menu__main--list:hover .menu__main--icon,
+  .menu__main--list:focus-visible .menu__main--icon {
+    background-color: $lightGreen;
+  }
+  .menu__slide {
+    &--button {
+      color: $lightGreen;
+      border: 2px solid $lightGreen;
+      &:hover,
+      &:focus-visible {
+        background-color: $lightGreen;
+        color: $white;
+      }
+    }
+    &--icon {
+      color: $white;
+      background-color: $lightGrey;
+    }
+  }
+  .menu__slide--list:hover .menu__slide--icon,
+  .menu__slide--list:focus-visible .menu__slide--icon {
+    background-color: $lightGreen;
+  }
+
+  .section__heading {
+    color: $lightGrey;
+    span {
+      color: $lightGreen;
+    }
+    &--bg {
+      color: rgba($color: $darkGrey, $alpha: 0.1);
+    }
+  }
+
+  .home__container {
+    .heading__greeting {
+      color: $lightGreen;
+    }
+    .heading__name {
+      color: $lightGreen;
+    }
+    .heading__occupation {
+      color: $darkGrey;
+    }
+    .heading__intro {
+      color: $lightGrey;
+    }
+  }
+  .heading__button {
+    border: 2px solid $lightGreen;
+    &:before {
+      background-color: $lightGreen;
+    }
+    &--text {
+      color: $lightGrey;
+    }
+    &--icon {
+      color: $lightGrey;
+      background-color: $lightGreen;
+    }
+  }
+
+  .about__pic--container {
+    img {
+      box-shadow: 0 0 10px $lightGreen;
+    }
+  }
+  .about__text--container {
+    h3 {
+      color: $lightGreen;
+    }
+    p {
+      color: $lightGrey;
+    }
+    i {
+      color: $lightGreen;
+    }
+  }
+
+  .skills__list--tech {
+    li {
+      color: $lightGrey;
+      .icon__container {
+        color: $lightGreen;
+      }
+    }
+    .upcoming__skill--text {
+      color: $lightGreen;
+    }
+  }
+
+  .carousel__button--arrows {
+    color: $lightGreen;
+    filter: drop-shadow(0px 4px 1px rgba($color: $lightGreen, $alpha: 0.3));
+  }
+  .projects__list {
+    &--pic {
+      img {
+        box-shadow: 0 0 10px $lightGreen;
+      }
+    }
+    &--title {
+      h2 {
+        color: $lightGreen;
+        text-shadow: 5px 5px 5px rgba($color: $darkGrey, $alpha: 0.2);
+      }
+    }
+  }
+
+  .project__container {
+    .project__title {
+      h1 {
+        color: $lightGreen;
+        text-shadow: 5px 5px 5px rgba($color: $darkGrey, $alpha: 0.2);
+      }
+    }
+    &--pic {
+      img {
+        box-shadow: 0 0 15px $lightGreen;
+      }
+    }
+    .project__link--text {
+      color: $darkGrey;
+    }
+    .project__link--icon {
+      color: $lightGreen;
+    }
+    .project__skill--list {
+      .icon__container {
+        color: $lightGreen;
+      }
+    }
+    .project__description {
+      color: $lightGrey;
+      a {
+        color: $lightGreen;
+      }
+    }
+  }
+
+  .contact__container {
+    color: $lightGrey;
+    .contact__icon {
+      color: $lightGreen;
+    }
+    &--left {
+      h3 {
+        color: $lightGreen;
+      }
+    }
+    &--right {
+      a {
+        color: $lightGrey;
+      }
+    }
+  }
+
+  .footer {
+    border-color: rgba($color: $darkGrey, $alpha: 0.2);
+    p {
+      color: $lightGrey;
+    }
+  }
+}

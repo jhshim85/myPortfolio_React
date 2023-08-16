@@ -22,7 +22,7 @@ const Theme = ({ children }) => {
 
   return (
     <>
-      <nav className={`nav ${theme}`}>
+      <nav className={theme}>
         <div className="theme__toggle">
           <FaMoon className="theme__toggle--icon" />
           <div

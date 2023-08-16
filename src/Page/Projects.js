@@ -87,7 +87,6 @@ const Projects = () => {
                 display: "inline-block",
                 marginLeft: 20,
                 cursor: "pointer",
-                border: "1px solid",
                 borderRadius: "50%",
                 width: "10px",
                 height: "10px",

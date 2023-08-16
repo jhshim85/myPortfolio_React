@@ -7,13 +7,13 @@
   display: flex;
   justify-content: center;
   gap: 50px;
+  margin-bottom: 50px;
   .about__pic--container {
     flex: 1 0 calc(40% - 50px);
     max-width: 400px;
     align-self: center;
     img {
       border-radius: 30px;
-      box-shadow: 0 0 10px $yellowOrange;
     }
   }
   .about__text--container {
@@ -28,11 +28,9 @@
       font-size: 1.05rem;
       letter-spacing: 0.1rem;
       line-height: 1.8rem;
-      color: $white;
     }
     i {
       font-weight: 800;
-      color: $yellowOrange;
     }
   }
 }

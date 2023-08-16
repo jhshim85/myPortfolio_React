@@ -1,0 +1,189 @@
+.page__theme--dark {
+  background-color: $black;
+  .theme__toggle {
+    color: $yellowOrange;
+    &--container {
+      border: 1px solid $yellowOrange;
+      &:focus-visible {
+        outline-color: $yellowOrange;
+      }
+    }
+  }
+
+  .menu__main {
+    &--item {
+      color: $white;
+    }
+    &--icon {
+      color: $white;
+      background-color: $darkGrey;
+    }
+  }
+  .menu__main--list:hover .menu__main--item,
+  .menu__main--list:focus-visible .menu__main--item {
+    background-color: $yellowOrange;
+  }
+  .menu__main--list:hover .menu__main--icon,
+  .menu__main--list:focus-visible .menu__main--icon {
+    background-color: $yellowOrange;
+  }
+  .menu__slide {
+    &--button {
+      color: $yellowOrange;
+      border: 2px solid $yellowOrange;
+      &:hover,
+      &:focus-visible {
+        background-color: $yellowOrange;
+        color: $white;
+      }
+    }
+    &--icon {
+      color: $white;
+      background-color: $lightGrey;
+    }
+  }
+  .menu__slide--list:hover .menu__slide--icon,
+  .menu__slide--list:focus-visible .menu__slide--icon {
+    background-color: $yellowOrange;
+  }
+
+  .section__heading {
+    color: $white;
+    span {
+      color: $yellowOrange;
+    }
+    &--bg {
+      color: rgba($color: $white, $alpha: 0.1);
+    }
+  }
+
+  .home__container {
+    .heading__greeting {
+      color: $yellowOrange;
+    }
+    .heading__name {
+      color: $yellowOrange;
+    }
+    .heading__occupation {
+      color: $lightGrey;
+    }
+    .heading__intro {
+      color: $white;
+    }
+  }
+  .heading__button {
+    border: 2px solid $yellowOrange;
+    &:before {
+      background-color: $yellowOrange;
+    }
+    &--text {
+      color: $white;
+    }
+    &--icon {
+      color: $white;
+      background-color: $yellowOrange;
+    }
+  }
+
+  .about__pic--container {
+    img {
+      box-shadow: 0 0 10px $yellowOrange;
+    }
+  }
+  .about__text--container {
+    h3 {
+      color: $yellowOrange;
+    }
+    p {
+      color: $white;
+    }
+    i {
+      color: $yellowOrange;
+    }
+  }
+
+  .skills__list--tech {
+    li {
+      color: $white;
+      .icon__container {
+        color: $yellowOrange;
+      }
+    }
+    .upcoming__skill--text {
+      color: $yellowOrange;
+    }
+  }
+
+  .carousel__button--arrows {
+    color: $yellowOrange;
+    filter: drop-shadow(0px 4px 1px rgba($color: $yellowOrange, $alpha: 0.3));
+  }
+  .projects__list {
+    &--pic {
+      img {
+        box-shadow: 0 0 10px $yellowOrange;
+      }
+    }
+    &--title {
+      h2 {
+        color: $yellowOrange;
+        text-shadow: 5px 5px 5px rgba($color: $white, $alpha: 0.3);
+      }
+    }
+  }
+
+  .project__container {
+    .project__title {
+      h1 {
+        color: $yellowOrange;
+        text-shadow: 5px 5px 5px rgba($color: $white, $alpha: 0.3);
+      }
+    }
+    &--pic {
+      img {
+        box-shadow: 0 0 15px $yellowOrange;
+      }
+    }
+    .project__link--text {
+      color: $lightGrey;
+    }
+    .project__link--icon {
+      color: $yellowOrange;
+    }
+    .project__skill--list {
+      .icon__container {
+        color: $yellowOrange;
+      }
+    }
+    .project__description {
+      color: $white;
+      a {
+        color: $yellowOrange;
+      }
+    }
+  }
+
+  .contact__container {
+    color: $white;
+    .contact__icon {
+      color: $yellowOrange;
+    }
+    &--left {
+      h3 {
+        color: $yellowOrange;
+      }
+    }
+    &--right {
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  .footer {
+    border-color: $darkGrey;
+    p {
+      color: $white;
+    }
+  }
+}

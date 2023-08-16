@@ -3,43 +3,40 @@
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
+  margin-bottom: 50px;
   .heading__greeting {
     font-size: 5rem;
     line-height: 5rem;
     letter-spacing: 1.1rem;
     margin: 100px 0 50px 0;
     font-weight: 850;
-    color: $yellowOrange;
   }
   .heading__name {
     font-size: 2rem;
     line-height: 2.5rem;
     letter-spacing: 0.3rem;
     font-weight: 800;
-    color: $yellowOrange;
   }
   .heading__occupation {
     text-transform: uppercase;
-    color: $lightGrey;
   }
   .heading__intro {
     font-size: 1.25rem;
     line-height: 2.2rem;
     letter-spacing: 0.05rem;
     font-weight: 800;
-    color: $white;
   }
 }
+
 .heading__button {
-  border: 2px solid $yellowOrange;
   border-radius: 35px;
   padding: 15px 70px 15px 35px;
   margin: 25px 0;
   font-weight: bold;
   position: relative;
   overflow: hidden;
+  z-index: 1;
   &:before {
-    background-color: $yellowOrange;
     z-index: -1;
     content: '';
     position: absolute;
@@ -59,13 +56,10 @@
     transition: 0.3s ease-out;
   }
   &--text {
-    color: $white;
     font-size: 1.1rem;
     margin: 0;
   }
   &--icon {
-    color: $white;
-    background-color: $yellowOrange;
     position: absolute;
     display: inline-block;
     right: -1px;

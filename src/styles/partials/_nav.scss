@@ -1,4 +1,4 @@
-.nav {
+nav {
   position: fixed;
   right: 10px;
   top: 10px;
@@ -10,7 +10,6 @@
 }
 
 .theme__toggle {
-  color: $yellowOrange;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -18,14 +17,12 @@
     font-size: 0.75rem;
   }
   &--container {
-    border: 1px solid $yellowOrange;
     height: 15px;
     width: 30px;
     border-radius: 25px;
     position: relative;
     &:focus-visible {
       outline-style: groove;
-      outline-color: $yellowOrange;
     }
   }
   &--notch {
@@ -61,7 +58,6 @@
     outline: none;
   }
   &--item {
-    color: $white;
     display: block;
     height: 50px;
     z-index: -1;
@@ -78,8 +74,6 @@
     transition: 0.3s ease-in-out;
   }
   &--icon {
-    color: $white;
-    background-color: $darkGrey;
     position: absolute;
     left: 0;
     right: 0;
@@ -97,11 +91,6 @@
   &--list:focus-visible &--item {
     visibility: visible;
     opacity: 1;
-    background-color: $yellowOrange;
-  }
-  &--list:hover &--icon,
-  &--list:focus-visible &--icon {
-    background-color: $yellowOrange;
   }
 }
 
@@ -122,13 +111,6 @@
     cursor: pointer;
     font-size: 1.25rem;
     outline: none;
-    color: $yellowOrange;
-    border: 2px solid $yellowOrange;
-    &:hover,
-    &:focus-visible {
-      background-color: $yellowOrange;
-      color: $white;
-    }
   }
   &--bar {
     z-index: 10;
@@ -152,11 +134,5 @@
     padding: 10px;
     border-radius: 25%;
     transition: background-color 0.2s ease-in-out;
-    color: $white;
-    background-color: $lightGrey;
-  }
-  &--list:hover &--icon,
-  &--list:focus-visible &--icon {
-    background-color: $yellowOrange;
   }
 }
