@@ -9,7 +9,7 @@ const Home = () => {
   const { theme } = useContext(ThemeContext);
   
   return (
-    <main className={theme}>
+    <main className={`home ${theme}`}>
       <div className="wrapper home__container">
         <h1 className="heading__greeting">Hello!</h1>
         <h2 className="heading__name">I'm Jaehyun(Jay).

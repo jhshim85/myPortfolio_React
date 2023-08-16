@@ -1,10 +1,47 @@
-nav {
+.nav {
   position: fixed;
-  right: 20px;
-  bottom: 0;
+  right: 10px;
+  top: 10px;
   z-index: 10;
-  height: calc(100vh - 200px);
-  top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.theme__toggle {
+  color: $yellowOrange;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &--icon {
+    font-size: 0.75rem;
+  }
+  &--container {
+    border: 1px solid $yellowOrange;
+    height: 15px;
+    width: 30px;
+    border-radius: 25px;
+    position: relative;
+    &:focus-visible {
+      outline-style: groove;
+      outline-color: $yellowOrange;
+    }
+  }
+  &--notch {
+    height: 13px;
+    width: 13px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+}
+
+.page__theme--light {
+  .theme__toggle--notch {
+    transform: translateX(16px);
+  }
 }
 
 .menu__main {
@@ -21,9 +58,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    &:focus-visible {
-      outline: none;
-    }
+    outline: none;
   }
   &--item {
     color: $white;
@@ -83,29 +118,31 @@ nav {
     padding: 10px;
     margin-top: 0px;
     margin-bottom: 5px;
-    cursor: pointer;
     font-weight: bolder;
+    cursor: pointer;
+    font-size: 1.25rem;
+    outline: none;
     color: $yellowOrange;
     border: 2px solid $yellowOrange;
-    font-size: 1.25rem;
-  }
-  &:hover &--button,
-  &:focus-within &--button {
-    background-color: $yellowOrange;
-    color: $white;
-  }
-  &:hover &--bar,
-  &:focus-within &--bar {
-    display: flex;
+    &:hover,
+    &:focus-visible {
+      background-color: $yellowOrange;
+      color: $white;
+    }
   }
   &--bar {
     z-index: 10;
-    position: relative;
     display: none;
+  }
+  &--clicked {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+  }
+  &--list {
+    outline: none;
   }
   &--icon {
     width: 25px;
@@ -118,8 +155,8 @@ nav {
     color: $white;
     background-color: $lightGrey;
   }
-  li:hover &--icon,
-  li:focus-within &--icon {
+  &--list:hover &--icon,
+  &--list:focus-visible &--icon {
     background-color: $yellowOrange;
   }
 }

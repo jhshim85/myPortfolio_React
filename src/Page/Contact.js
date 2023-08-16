@@ -5,7 +5,6 @@ import { useContext } from "react";
 const Contact = () => {
 
   const { theme } = useContext(ThemeContext);
-  console.log(theme);
 
   return (
     <main className={`contact ${theme}`}>

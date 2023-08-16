@@ -1,6 +1,6 @@
 import { FaMoon, FaCircleHalfStroke, FaSun } from "react-icons/fa6";
 import { useState, createContext } from "react";
-
+import Nav from "./Nav";
 const ThemeContext = createContext(null);
 export { ThemeContext };
 
@@ -14,20 +14,29 @@ const Theme = ({ children }) => {
         : "page__theme--dark"
     );
   };
+  const handler = (e) => {
+    return (
+      e.key === "Enter" ? toggleTheme() : null
+    )
+  }
 
   return (
     <>
-      <div className={`theme__toggle ${theme}`}>
-        <FaMoon className="theme__toggle--icon" />
-        <div
-          className="theme__toggle--container"
-          tabIndex="0"
-          onClick={toggleTheme}
-        >
-          <FaCircleHalfStroke className="theme__toggle--notch" />
+      <nav className={`nav ${theme}`}>
+        <div className="theme__toggle">
+          <FaMoon className="theme__toggle--icon" />
+          <div
+            className="theme__toggle--container"
+            tabIndex="0"
+            onClick={toggleTheme}
+            onKeyDown={handler}
+          >
+            <FaCircleHalfStroke className="theme__toggle--notch" />
+          </div>
+          <FaSun className="theme__toggle--icon" />
         </div>
-        <FaSun className="theme__toggle--icon" />
-      </div>
+        <Nav />
+      </nav>
       <ThemeContext.Provider value={{ theme, setTheme }}>
         {children}
       </ThemeContext.Provider>

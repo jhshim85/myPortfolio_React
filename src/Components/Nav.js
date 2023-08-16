@@ -1,15 +1,24 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faUser, faScrewdriverWrench, faPanorama, faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { ThemeContext } from "./Theme";
-import { useContext } from "react";
+import { useState } from "react";
 
 const Nav = () => {
 
-  const {theme} = useContext(ThemeContext);
+  const [clicked, setClicked] = useState("menu__slide--bar");
+  const menuClicked = () => {
+    setClicked((current) =>
+      current === "menu__slide--bar"
+        ? "menu__slide--clicked"
+        : "menu__slide--bar"
+    );
+  };
+  const handler = (e) => {
+    return e.key === "Enter" ? menuClicked() : null;
+  };
 
   return (
-    <nav className={theme}>
+    <div className="menu__container">
       <ul className="menu__main">
         <li>
           <Link to="/" className="menu__main--list">
@@ -25,13 +34,13 @@ const Nav = () => {
         </li>
         <li>
           <Link to="/skills" className="menu__main--list">
-            <h4 className="menu__main--item">Skill</h4>
+            <h4 className="menu__main--item">Skills</h4>
             <FontAwesomeIcon icon={faScrewdriverWrench} className="menu__main--icon" />
           </Link>
         </li>
         <li>
           <Link to="/projects" className="menu__main--list">
-            <h4 className="menu__main--item">Project</h4>
+            <h4 className="menu__main--item">Projects</h4>
             <FontAwesomeIcon icon={faPanorama} className="menu__main--icon" />
           </Link>
         </li>
@@ -43,36 +52,36 @@ const Nav = () => {
         </li>
       </ul>
       <div className="menu__slide">
-        <p className="menu__slide--button" title="Click Me" tabIndex='0'>JS</p>
-        <ul className="menu__slide--bar">
+        <p className="menu__slide--button" type="button" title="Click Me" tabIndex='0' onClick={menuClicked} onKeyDown={handler}>JS</p>
+        <ul className={clicked}>
           <li>
-            <Link to="/">
-              <FontAwesomeIcon icon={faHome} className="menu__slide--icon"/>
+            <Link to="/" className="menu__slide--list">
+              <FontAwesomeIcon icon={faHome} className="menu__slide--icon" title="Home"/>
             </Link>
           </li>
           <li>
-            <Link to="/about">
-              <FontAwesomeIcon icon={faUser} className="menu__slide--icon"/>
+            <Link to="/about" className="menu__slide--list">
+              <FontAwesomeIcon icon={faUser} className="menu__slide--icon" title="About"/>
             </Link>
           </li>
           <li>
-            <Link to="/skills">
-              <FontAwesomeIcon icon={faScrewdriverWrench} className="menu__slide--icon"/>
+            <Link to="/skills" className="menu__slide--list">
+              <FontAwesomeIcon icon={faScrewdriverWrench} className="menu__slide--icon" title="Skills"/>
             </Link>
           </li>
           <li>
-            <Link to="/projects">
-              <FontAwesomeIcon icon={faPanorama} className="menu__slide--icon"/>
+            <Link to="/projects" className="menu__slide--list">
+              <FontAwesomeIcon icon={faPanorama} className="menu__slide--icon" title="Projects"/>
             </Link>
           </li>
           <li>
-            <Link to="/contact">
-              <FontAwesomeIcon icon={faEnvelopeOpen} className="menu__slide--icon"/>
+            <Link to="/contact" className="menu__slide--list">
+              <FontAwesomeIcon icon={faEnvelopeOpen} className="menu__slide--icon" title="Contact"/>
             </Link>
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
   )
 }
 
