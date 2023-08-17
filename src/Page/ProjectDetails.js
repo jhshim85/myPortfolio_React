@@ -1,16 +1,13 @@
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
-import { useState, useEffect, useContext } from "react";
 import Client from "../util/useContentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { INLINES } from "@contentful/rich-text-types";
 import { DiHtml5, DiCss3, DiSass, DiJsBadge, DiFirebase } from "react-icons/di";
 import { FaGear, FaReact, FaLink, FaGithub } from "react-icons/fa6";
 import { SiFirebase, SiContentful, SiTypescript } from "react-icons/si";
-import { ThemeContext } from "../Components/Theme";
 
 const ProjectDetails = () => {
-  
-  const { theme } = useContext(ThemeContext);
 
   const urlData = useParams();
 
@@ -62,7 +59,7 @@ const ProjectDetails = () => {
   }
   
   return (
-    <main className={`project ${theme}`}>
+    <main className="project">
       {project.map((item) => {
         return (
           <div className="project__container wrapper" key={item.id}>

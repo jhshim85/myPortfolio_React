@@ -13,8 +13,8 @@ body {
   overflow-y: scroll;
 }
 
-#root {
-  height: 100vh;
+.page__theme {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }

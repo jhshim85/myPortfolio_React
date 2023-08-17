@@ -1,15 +1,11 @@
 import { DiHtml5, DiCss3, DiSass, DiJsBadge, DiJqueryLogo, DiFirebase } from "react-icons/di";
 import { FaGear, FaReact, FaGithub, FaTerminal, FaLaptopCode, FaUniversalAccess } from "react-icons/fa6";
 import { SiFirebase, SiContentful, SiBitly, SiJirasoftware, SiTypescript } from "react-icons/si";
-import { ThemeContext } from "../Components/Theme";
-import { useContext } from "react";
 
 const Skills = () => {
-
-  const { theme } = useContext(ThemeContext);
   
   return (
-    <main className={`skills ${theme}`}>
+    <main className="skills">
       <div className="wrapper">
         <h1 className="section__heading">My <span>Skills</span></h1>
         <h2 className="section__heading--bg">Skills</h2>

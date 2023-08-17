@@ -1,10 +1,10 @@
 import { useEffect, useState, useContext } from "react";
-import Client from "../util/useContentful";
-import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Client from "../util/useContentful";
 import { Carousel } from "react-responsive-carousel";
-import { ThemeContext } from "../Components/Theme";
+import { ThemeContext } from "../Components/ThemeProvider";
+import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Projects = () => {
 
@@ -55,7 +55,7 @@ const Projects = () => {
   };
 
   return (
-    <main className={`projects ${theme}`}>
+    <main className="projects">
       <div className="wrapper">
         <h1 className="section__heading">My <span>Projects</span></h1>
         <h2 className="section__heading--bg">Projects</h2>
@@ -93,11 +93,11 @@ const Projects = () => {
                 backgroundColor: "#666",
               };
               const style =
-                isSelected && theme === "page__theme--dark"
+                isSelected && theme === "dark"
                   ? { ...defStyle, backgroundColor: "#ffb400" }
-                  : isSelected && theme === "page__theme--light"
+                  : isSelected && theme === "light"
                   ? { ...defStyle, backgroundColor: "#72b626" }
-                  : !isSelected && theme === "page__theme--light"
+                  : !isSelected && theme === "light"
                   ? { ...defStyle, backgroundColor: "#2b2a2a" }
                   : { ...defStyle };
               return (

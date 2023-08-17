@@ -1,4 +1,5 @@
 import { Route, Routes} from 'react-router-dom';
+import ThemeProvider from './Components/ThemeProvider';
 import ScrollToTop from './Components/ScrollToTop';
 import Theme from './Components/Theme';
 import Home from "./Page/Home";
@@ -10,21 +11,21 @@ import Contact from './Page/Contact';
 import Footer from './Components/Footer';
 
 function App() {
+  
   return (
-    <>
+    <ThemeProvider>
       <ScrollToTop />
-      <Theme>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:projectName" element={<ProjectDetails />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </Theme>
-    </>
+      <Theme />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:projectName" element={<ProjectDetails />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </ThemeProvider>
   );
 }
 

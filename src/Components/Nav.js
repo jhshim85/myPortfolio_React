@@ -1,11 +1,12 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faUser, faScrewdriverWrench, faPanorama, faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const Nav = () => {
 
   const [clicked, setClicked] = useState("menu__slide--bar");
+  
   const menuClicked = () => {
     setClicked((current) =>
       current === "menu__slide--bar"
@@ -13,6 +14,7 @@ const Nav = () => {
         : "menu__slide--bar"
     );
   };
+  
   const handler = (e) => {
     return e.key === "Enter" ? menuClicked() : null;
   };

@@ -1,15 +1,11 @@
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-import { ThemeContext } from "../Components/Theme";
-import { useContext } from "react";
 
 const Home = () => {
 
-  const { theme } = useContext(ThemeContext);
-  
   return (
-    <main className={`home ${theme}`}>
+    <main className="home">
       <div className="wrapper home__container">
         <h1 className="heading__greeting">Hello!</h1>
         <h2 className="heading__name">I'm Jaehyun(Jay).

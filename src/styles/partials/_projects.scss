@@ -5,7 +5,7 @@
 
 .carousel__button {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 3rem);
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -29,13 +29,14 @@
 }
 
 .projects__container {
-  margin-bottom: 50px;
+  margin: 0 50px 50px 50px;
   .projects__list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 30px 50px;
     &--pic {
+      margin: 0 20px;
       display: flex;
       justify-content: center;
       img {
