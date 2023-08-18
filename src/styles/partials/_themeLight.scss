@@ -125,7 +125,7 @@ background-color: $white;
       }
     }
     &--title {
-      h2 {
+      h3 {
         color: $lightGreen;
         text-shadow: 5px 5px 5px rgba($color: $darkGrey, $alpha: 0.2);
       }
@@ -159,6 +159,10 @@ background-color: $white;
       color: $lightGrey;
       a {
         color: $lightGreen;
+        &:hover,
+        &:focus-visible {
+          text-shadow: 3px 3px 5px rgba($color: $darkGrey, $alpha: 0.2);
+        }
       }
     }
   }

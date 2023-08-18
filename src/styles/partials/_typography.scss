@@ -13,19 +13,20 @@ body {
   overflow-y: scroll;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
+}
+
 .page__theme {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
 }
 
 main {
   flex-grow: 1;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-  /* for Chrome, Safari, and Opera */
 }
 
 ul,

@@ -125,7 +125,7 @@
       }
     }
     &--title {
-      h2 {
+      h3 {
         color: $yellowOrange;
         text-shadow: 5px 5px 5px rgba($color: $white, $alpha: 0.3);
       }
@@ -159,6 +159,10 @@
       color: $white;
       a {
         color: $yellowOrange;
+        &:hover,
+        &:focus-visible {
+          text-shadow: 3px 3px 5px rgba($color: $white, $alpha: 0.3);
+        }
       }
     }
   }

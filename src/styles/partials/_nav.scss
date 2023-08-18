@@ -31,7 +31,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -70,7 +70,7 @@ nav {
     border-radius: 35px;
     padding: 16px 65px 16px 25px;
     font-weight: 900;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   &--icon {
     position: absolute;
@@ -112,9 +112,13 @@ nav {
     outline: none;
   }
   &--bar {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
   &--clicked {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;

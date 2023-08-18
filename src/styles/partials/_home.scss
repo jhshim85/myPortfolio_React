@@ -53,7 +53,7 @@
   &:hover:before,
   &:focus:before {
     transform: translateX(0);
-    transition: 0.3s ease-out;
+    transition: all 0.3s ease-out;
   }
   &--text {
     font-size: 1.1rem;

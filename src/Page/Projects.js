@@ -123,7 +123,7 @@ const Projects = () => {
                       <img src={item.image} alt={item.imageName} />
                     </div>
                     <div className="projects__list--title">
-                      <h2>{item.title}</h2>
+                      <h3>{item.title}</h3>
                     </div>
                   </div>
                 </Link>
