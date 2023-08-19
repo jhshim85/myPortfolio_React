@@ -29,7 +29,7 @@
 }
 
 .projects__container {
-  margin: 0 50px 50px 50px;
+  margin: 50px;
   .projects__list {
     display: flex;
     flex-direction: column;
@@ -47,6 +47,8 @@
       }
     }
     &--title {
+      align-self: center;
+      width: 90%;
       h3 {
         text-transform: capitalize;
         font-size: 1.5rem;

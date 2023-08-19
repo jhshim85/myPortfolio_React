@@ -117,16 +117,16 @@ const Projects = () => {
           >
             {projects.map((item) => {
               return (
-                <Link to={`/projects/${item.url}`} key={item.id}>
-                  <div className="projects__list">
-                    <div className="projects__list--pic">
+                <div className="projects__list">
+                  <div className="projects__list--pic">
+                    <Link to={`/projects/${item.url}`} key={item.id}>
                       <img src={item.image} alt={item.imageName} />
-                    </div>
-                    <div className="projects__list--title">
-                      <h3>{item.title}</h3>
-                    </div>
+                    </Link>
                   </div>
-                </Link>
+                  <div className="projects__list--title">
+                    <h3>{item.title}</h3>
+                  </div>
+                </div>
               );
             })}
           </Carousel>
