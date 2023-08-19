@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import Client from "../util/useContentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { INLINES } from "@contentful/rich-text-types";
+import ErrorData from "../Components/ErrorData";
 import { DiHtml5, DiCss3, DiSass, DiJsBadge, DiFirebase } from "react-icons/di";
 import { FaGear, FaReact, FaLink, FaGithub } from "react-icons/fa6";
 import { SiFirebase, SiContentful, SiTypescript } from "react-icons/si";
@@ -57,7 +58,11 @@ const ProjectDetails = () => {
       }
     }
   }
-  
+    
+  if (error) {
+    return <ErrorData />;
+  }
+
   return (
     <main className="project">
       {project.map((item) => {

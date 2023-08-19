@@ -212,6 +212,17 @@
     }
   }
 
+  .eData {
+    .eData__container {
+      &--heading {
+        color: $yellowOrange;
+      }
+      &--text {
+        color: $white;
+      }
+    }
+  }
+
   .footer {
     border-color: $darkGrey;
     p {

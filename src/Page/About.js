@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Client from "../util/useContentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import ErrorData from "../Components/ErrorData";
 
 const About = () => {
 
@@ -35,6 +36,12 @@ const About = () => {
     getAbout();
   }, []);
   
+  if (error) {
+    return (
+      <ErrorData />
+    )
+  }
+
   return (
     <main className="about">
       <div className="wrapper">

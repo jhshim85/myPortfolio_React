@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Client from "../util/useContentful";
+import ErrorData from "../Components/ErrorData";
 import { Carousel } from "react-responsive-carousel";
 import { ThemeContext } from "../Components/ThemeProvider";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
@@ -53,6 +54,10 @@ const Projects = () => {
     transitionTime: 500,
     useKeyboardArrows: true,
   };
+  
+  if (error) {
+    return <ErrorData />;
+  }
 
   return (
     <main className="projects">

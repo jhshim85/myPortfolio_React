@@ -1,0 +1,25 @@
+.eData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .eData__container {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    &--heading {
+      display: block;
+      margin: 0;
+      align-self: center;
+      text-transform: uppercase;
+    }
+    &--text {
+      display: block;
+      margin: 0;
+      align-self: center;
+      line-height: 2rem;
+    }
+  }
+}
