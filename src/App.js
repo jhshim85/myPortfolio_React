@@ -8,6 +8,7 @@ import Skills from './Page/Skills';
 import Projects from './Page/Projects';
 import ProjectDetails from './Page/ProjectDetails';
 import Contact from './Page/Contact';
+import ErrorPage from './Page/ErrorPage';
 import Footer from './Components/Footer';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:projectName" element={<ProjectDetails />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </ThemeProvider>

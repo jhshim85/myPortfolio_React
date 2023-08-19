@@ -391,6 +391,19 @@
       }
     }
   }
+  .ePage {
+    .ePage__container {
+      &--heading {
+        font-size: 1.6rem;
+      }
+      &--text {
+        font-size: 0.9rem;
+      }
+      &--button {
+        font-size: 0.9rem;
+      }
+    }
+  }
   .footer {
     border-top: 4px solid;
     p {
@@ -701,6 +714,25 @@
           font-size: 0.8rem;
         }
       }
+    }
+  }
+  .ePage {
+    .ePage__container {
+      &--heading {
+        font-size: 1.2rem;
+      }
+      &--text {
+        font-size: 0.8rem;
+      }
+      &--button {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .footer {
+    border-top: 3px solid;
+    p {
+      font-size: 0.8rem;
     }
   }
 }

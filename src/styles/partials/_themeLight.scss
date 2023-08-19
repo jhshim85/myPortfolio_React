@@ -184,6 +184,34 @@ background-color: $white;
     }
   }
 
+    .ePage {
+    .ePage__container {
+      &--heading {
+        color: $lightGreen;
+      }
+      &--text {
+        color: $lightGrey;
+      }
+      &--button {
+        color: $white;
+        text-shadow: 1px 1px 1px $black;
+        background-color: $lightGreen;
+        box-shadow:
+          inset 2px 2px 3px rgba($color: $white, $alpha: 0.6),
+          inset -2px -2px 3px rgba($color: $black, $alpha: 0.6);
+        &:hover,
+        &:focus-visible {
+          background-image: linear-gradient(to top left, rgba($color: $white, $alpha: 0.3), rgba($color: $white, $alpha: 0.1) 30%, rgba($color: $white, $alpha: 0));
+        }
+        &:active {
+          box-shadow:
+            inset -3px -3px 3px rgba($color: $white, $alpha: 0.6),
+            inset 3px 3px 3px rgba($color: $black, $alpha: 0.6);
+        }
+      }
+    }
+  }
+
   .footer {
     border-color: rgba($color: $darkGrey, $alpha: 0.2);
     p {
