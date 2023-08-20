@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Client from "../util/useContentful";
 import ErrorData from "../Components/ErrorData";
+import LoaderProjects from "../Components/LoaderProjects";
 import { Carousel } from "react-responsive-carousel";
 import { ThemeContext } from "../Components/ThemeProvider";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
@@ -120,20 +121,26 @@ const Projects = () => {
               );
             }}
           >
-            {projects.map((item) => {
-              return (
-                <div className="projects__list">
-                  <div className="projects__list--pic">
-                    <Link to={`/projects/${item.url}`} key={item.id}>
-                      <img src={item.image} alt={item.imageName} />
-                    </Link>
+            {
+              loading
+              ?
+              <LoaderProjects/>
+              :
+              projects.map((item) => {
+                return (
+                  <div className="projects__list" key={item.id}>
+                    <div className="projects__list--pic">
+                      <Link to={`/projects/${item.url}`}>
+                        <img src={item.image} alt={item.imageName} />
+                      </Link>
+                    </div>
+                    <div className="projects__list--title">
+                      <h3>{item.title}</h3>
+                    </div>
                   </div>
-                  <div className="projects__list--title">
-                    <h3>{item.title}</h3>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })
+            }
           </Carousel>
         </div>
       </div>
