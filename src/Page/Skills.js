@@ -1,13 +1,37 @@
-import { DiHtml5, DiCss3, DiSass, DiJsBadge, DiJqueryLogo, DiFirebase } from "react-icons/di";
-import { FaGear, FaReact, FaGithub, FaTerminal, FaLaptopCode, FaUniversalAccess } from "react-icons/fa6";
-import { SiFirebase, SiContentful, SiBitly, SiJirasoftware, SiTypescript } from "react-icons/si";
+import {
+  DiHtml5,
+  DiCss3,
+  DiSass,
+  DiJsBadge,
+  DiJqueryLogo,
+  DiFirebase
+} from "react-icons/di";
+import {
+  FaGear,
+  FaReact,
+  FaGithub,
+  FaTerminal,
+  FaLaptopCode,
+  FaUniversalAccess,
+} from "react-icons/fa6";
+import {
+  SiFirebase,
+  SiContentful,
+  SiBitly,
+  SiJirasoftware,
+  SiBootstrap,
+  SiTypescript,
+  SiPython,
+} from "react-icons/si";
 
 const Skills = () => {
   
   return (
     <main className="skills">
       <div className="wrapper">
-        <h1 className="section__heading">My <span>Skills</span></h1>
+        <h1 className="section__heading">
+          My <span>Skills</span>
+        </h1>
         <h2 className="section__heading--bg">Skills</h2>
         <div className="skills__container">
           <div className="skills__container--tech">
@@ -108,11 +132,26 @@ const Skills = () => {
                 </div>
                 <p>Jira</p>
               </li>
+              <li>
+                <div className="icon__container">
+                  <SiBootstrap />
+                </div>
+                <p>Bootstrap</p>
+              </li>
               <li className="upcoming__skill">
                 <div className="icon__container">
                   <SiTypescript className="upcoming__skill--icon" />
                 </div>
                 <p className="upcoming__skill--type">Typescript</p>
+                <div className="upcoming__skill--text">
+                  <p>installing...</p>
+                </div>
+              </li>
+              <li className="upcoming__skill">
+                <div className="icon__container">
+                  <SiPython className="upcoming__skill--icon" />
+                </div>
+                <p className="upcoming__skill--type">Python</p>
                 <div className="upcoming__skill--text">
                   <p>installing...</p>
                 </div>

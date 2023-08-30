@@ -7,7 +7,12 @@ import ErrorData from "../Components/ErrorData";
 import LoaderProjectDetails from "../Components/LoaderProjectDetails";
 import { DiHtml5, DiCss3, DiSass, DiJsBadge, DiFirebase } from "react-icons/di";
 import { FaGear, FaReact, FaLink, FaGithub } from "react-icons/fa6";
-import { SiFirebase, SiContentful } from "react-icons/si";
+import {
+  SiFirebase,
+  SiContentful,
+  SiBootstrap,
+  SiPython,
+} from "react-icons/si";
 
 const ProjectDetails = () => {
 
@@ -128,6 +133,10 @@ const ProjectDetails = () => {
                               <FaReact title="React" />
                             ) : item === "Contentful" ? (
                               <SiContentful title="Contentful" />
+                            ) : item === "Bootstrap" ? (
+                              <SiBootstrap title="Bootstrap" />
+                            ) : item === "Python" ? (
+                              <SiPython title="Python" />
                             ) : null}
                           </div>
                         </li>
