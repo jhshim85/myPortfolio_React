@@ -14,7 +14,8 @@
     &--item {
       color: $white;
     }
-    &--icon {
+    &--icon,
+    &--active {
       color: $white;
       background-color: $darkGrey;
     }
@@ -24,7 +25,8 @@
     background-color: $yellowOrange;
   }
   .menu__main--list:hover .menu__main--icon,
-  .menu__main--list:focus-visible .menu__main--icon {
+  .menu__main--list:focus-visible .menu__main--icon,
+  .menu__main--active {
     background-color: $yellowOrange;
   }
   .menu__slide {
@@ -37,13 +39,15 @@
         color: $white;
       }
     }
-    &--icon {
+    &--icon,
+    &--active {
       color: $white;
       background-color: $lightGrey;
     }
   }
   .menu__slide--list:hover .menu__slide--icon,
-  .menu__slide--list:focus-visible .menu__slide--icon {
+  .menu__slide--list:focus-visible .menu__slide--icon,
+  .menu__slide--active {
     background-color: $yellowOrange;
   }
 
@@ -85,11 +89,11 @@
     }
   }
 
-  .about__pic--container {
-    img {
-      box-shadow: 0 0 10px $yellowOrange;
-    }
-  }
+  // .about__pic--container {
+  //   img {
+  //     box-shadow: 0 0 10px $yellowOrange;
+  //   }
+  // }
   .about__text--container {
     h3 {
       color: $yellowOrange;
@@ -116,18 +120,18 @@
 
   .carousel__button--arrows {
     color: $yellowOrange;
-    filter: drop-shadow(0px 4px 1px rgba($color: $yellowOrange, $alpha: 0.3));
+    // filter: drop-shadow(0px 4px 1px rgba($color: $yellowOrange, $alpha: 0.3));
   }
   .projects__list {
-    &--pic {
-      img {
-        box-shadow: 0 0 10px $yellowOrange;
-      }
-    }
+    // &--pic {
+    //   img {
+    //     box-shadow: 0 0 10px $yellowOrange;
+    //   }
+    // }
     &--title {
       h3 {
         color: $yellowOrange;
-        text-shadow: 5px 5px 5px rgba($color: $white, $alpha: 0.3);
+        // text-shadow: 5px 5px 5px rgba($color: $white, $alpha: 0.3);
       }
     }
   }
@@ -136,14 +140,14 @@
     .project__title {
       h1 {
         color: $yellowOrange;
-        text-shadow: 5px 5px 5px rgba($color: $white, $alpha: 0.3);
+        // text-shadow: 5px 5px 5px rgba($color: $white, $alpha: 0.3);
       }
     }
-    &--pic {
-      img {
-        box-shadow: 0 0 15px $yellowOrange;
-      }
-    }
+    // &--pic {
+    //   img {
+    //     box-shadow: 0 0 15px $yellowOrange;
+    //   }
+    // }
     .project__link--text {
       color: $lightGrey;
     }

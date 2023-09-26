@@ -13,6 +13,7 @@ import {
   FaTerminal,
   FaLaptopCode,
   FaUniversalAccess,
+  FaWordpress,
 } from "react-icons/fa6";
 import {
   SiFirebase,
@@ -22,6 +23,9 @@ import {
   SiBootstrap,
   SiTypescript,
   SiPython,
+  SiGooglecloud,
+  SiAmazonaws,
+  SiWoocommerce,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -137,6 +141,30 @@ const Skills = () => {
                   <SiBootstrap />
                 </div>
                 <p>Bootstrap</p>
+              </li>
+              <li>
+                <div className="icon__container">
+                  <FaWordpress />
+                </div>
+                <p>WordPress</p>
+              </li>
+              <li>
+                <div className="icon__container">
+                  <SiGooglecloud />
+                </div>
+                <p>Google Cloud</p>
+              </li>
+              <li>
+                <div className="icon__container">
+                  <SiAmazonaws />
+                </div>
+                <p>AWS</p>
+              </li>
+              <li>
+                <div className="icon__container">
+                  <SiWoocommerce />
+                </div>
+                <p>Woocommerce</p>
               </li>
               <li className="upcoming__skill">
                 <div className="icon__container">

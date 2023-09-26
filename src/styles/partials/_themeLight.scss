@@ -14,7 +14,8 @@ background-color: $white;
     &--item {
       color: $white;
     }
-    &--icon {
+    &--icon,
+    &--active {
       color: $white;
       background-color: $lightGrey;
     }
@@ -24,7 +25,8 @@ background-color: $white;
     background-color: $lightGreen;
   }
   .menu__main--list:hover .menu__main--icon,
-  .menu__main--list:focus-visible .menu__main--icon {
+  .menu__main--list:focus-visible .menu__main--icon,
+  .menu__main--active {
     background-color: $lightGreen;
   }
   .menu__slide {
@@ -37,13 +39,15 @@ background-color: $white;
         color: $white;
       }
     }
-    &--icon {
+    &--icon,
+    &--active {
       color: $white;
       background-color: $lightGrey;
     }
   }
   .menu__slide--list:hover .menu__slide--icon,
-  .menu__slide--list:focus-visible .menu__slide--icon {
+  .menu__slide--list:focus-visible .menu__slide--icon,
+  .menu__slide--active {
     background-color: $lightGreen;
   }
 
@@ -85,11 +89,11 @@ background-color: $white;
     }
   }
 
-  .about__pic--container {
-    img {
-      box-shadow: 0 0 10px $lightGreen;
-    }
-  }
+  // .about__pic--container {
+  //   img {
+  //     box-shadow: 0 0 10px $lightGreen;
+  //   }
+  // }
   .about__text--container {
     h3 {
       color: $lightGreen;
@@ -116,18 +120,18 @@ background-color: $white;
 
   .carousel__button--arrows {
     color: $lightGreen;
-    filter: drop-shadow(0px 4px 1px rgba($color: $lightGreen, $alpha: 0.3));
+    // filter: drop-shadow(0px 4px 1px rgba($color: $lightGreen, $alpha: 0.3));
   }
   .projects__list {
-    &--pic {
-      img {
-        box-shadow: 0 0 10px $lightGreen;
-      }
-    }
+    // &--pic {
+    //   img {
+    //     box-shadow: 0 0 10px $lightGreen;
+    //   }
+    // }
     &--title {
       h3 {
         color: $lightGreen;
-        text-shadow: 5px 5px 5px rgba($color: $darkGrey, $alpha: 0.2);
+        // text-shadow: 5px 5px 5px rgba($color: $darkGrey, $alpha: 0.2);
       }
     }
   }
@@ -136,14 +140,14 @@ background-color: $white;
     .project__title {
       h1 {
         color: $lightGreen;
-        text-shadow: 5px 5px 5px rgba($color: $darkGrey, $alpha: 0.2);
+        // text-shadow: 5px 5px 5px rgba($color: $darkGrey, $alpha: 0.2);
       }
     }
-    &--pic {
-      img {
-        box-shadow: 0 0 15px $lightGreen;
-      }
-    }
+    // &--pic {
+    //   img {
+    //     box-shadow: 0 0 15px $lightGreen;
+    //   }
+    // }
     .project__link--text {
       color: $darkGrey;
     }

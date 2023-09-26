@@ -11,7 +11,7 @@ const Contact = () => {
           <div className="contact__container--left">
             <h3>Let's Connect!</h3>
             <p>
-              Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions. I'm also available for a casual chat over a coffee or a drink!
+              Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be a part of your visions. I'm also available for a casual chat over coffee or drink!
             </p>
             <address>
               <FaLocationDot className="contact__icon" />

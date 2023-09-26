@@ -5,13 +5,28 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { INLINES } from "@contentful/rich-text-types";
 import ErrorData from "../Components/ErrorData";
 import LoaderProjectDetails from "../Components/LoaderProjectDetails";
-import { DiHtml5, DiCss3, DiSass, DiJsBadge, DiFirebase } from "react-icons/di";
-import { FaGear, FaReact, FaLink, FaGithub } from "react-icons/fa6";
+import {
+  DiHtml5,
+  DiCss3,
+  DiSass,
+  DiJsBadge,
+  DiFirebase,
+} from "react-icons/di";
+import {
+  FaGear,
+  FaReact,
+  FaLink,
+  FaGithub,
+  FaWordpress,
+} from "react-icons/fa6";
 import {
   SiFirebase,
   SiContentful,
   SiBootstrap,
   SiPython,
+  SiGooglecloud,
+  SiAmazonaws,
+  SiWoocommerce,
 } from "react-icons/si";
 
 const ProjectDetails = () => {
@@ -97,6 +112,9 @@ const ProjectDetails = () => {
                         <FaLink className="project__link--icon" />
                       </a>
                     </li>
+                    {
+                    item.githubRepo
+                    ?
                     <li className="project__link--container">
                       <p className="project__link--text">Github repo: </p>
                       <a
@@ -107,6 +125,8 @@ const ProjectDetails = () => {
                         <FaGithub className="project__link--icon" />
                       </a>
                     </li>
+                    : null
+                    }
                   </ul>
                 </div>
                 <div className="project__skill">
@@ -137,6 +157,14 @@ const ProjectDetails = () => {
                               <SiBootstrap title="Bootstrap" />
                             ) : item === "Python" ? (
                               <SiPython title="Python" />
+                            ) : item === "WordPress" ? (
+                              <FaWordpress title="WordPress" />
+                            ) : item === "GoogleCloud" ? (
+                              <SiGooglecloud title="GoogleCloud" />
+                            ) : item === "AWS" ? (
+                              <SiAmazonaws title="AWS" />
+                            ) : item === "Woocommerce" ? (
+                              <SiWoocommerce title="Woocommerce" />
                             ) : null}
                           </div>
                         </li>
