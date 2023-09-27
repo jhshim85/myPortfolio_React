@@ -67,7 +67,7 @@ const ProjectDetails = () => {
       }
     };
     getProject();
-  }, []);
+  }, [urlData.projectName]);
 
   const renderOptions = {
     renderNode: {
